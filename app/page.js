@@ -58,7 +58,15 @@ function compressImage(file, maxSize = 1000, quality = 0.72) {
 
 export default function App() {
   const [view, setView] = useState('store')
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([  {
+    id: '1',
+    name: 'اسم المنتج هنا',
+    price: 3500,
+    oldPrice: 4500,
+    images: ['https://via.placeholder.com/400'],
+    description: 'وصف المنتج هنا'
+  }
+])
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState(null)
   const [activeImg, setActiveImg] = useState(0)
